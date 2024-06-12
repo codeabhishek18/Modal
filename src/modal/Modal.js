@@ -70,11 +70,12 @@ const Modal = () =>
     }
 
     return(
-        <div className='modal'>
+        <div className='container'>
             <h1>User Details Modal</h1>
             <button onClick={()=>setShowForm(true)}>Open Form</button>
 
-            {showForm && <div className='modal-content' onClick={closeContainer}>
+            {showForm && <div className='modal' onClick={closeContainer}>
+            <div className='modal-content'>
                 <form onSubmit={handleSubmit} id='form'>
                     <h2>Fill Details</h2>
 
@@ -128,6 +129,7 @@ const Modal = () =>
 
                     <button className='submit-button'>Submit</button>
                 </form>
+                </div>
             </div>}
         </div>
     )
